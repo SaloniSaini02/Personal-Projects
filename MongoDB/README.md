@@ -10,3 +10,6 @@ task to be updated are passed to these pages using render_template() as keyword 
 
 
 ![Screenshot](images/ToDo1.png)
+
+
+![Screenshot](images/ToDo2.png)
