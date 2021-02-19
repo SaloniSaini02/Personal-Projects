@@ -7,3 +7,6 @@ This is a local application to add, delete and update tasks:
 4. The delete and update routes also take in a variable which is the id of the task to delete and update. These ids are passed in the href attribute of the task links using Jinja2.  
 5. The templates folder defines the html pages rendered by the app. The index.html and update.html files extend the base.html file. The list of all tasks and the 
 task to be updated are passed to these pages using render_template() as keyword arguments and accessed by these pages using Jinja2 templates. 
+
+
+![Screenshot](images/ToDo1.png)
