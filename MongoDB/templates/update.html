@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<title>Update Task</title>
+{% endblock %}
+
+{% block body %}
+ <nav class="navbar navbar-expand-sm ">
+     <a class="navbar-brand" href="#">Flask</a>
+     <p class="navbar-text">Update Task</p>
+</nav>
+<div class="container p-3 my-3 border">
+    <div class="form">
+        <form action="/update/{{tasks[0]._id}}" method="POST">
+            <div class="form-group">
+                <label for="content" style="font-size: 20px ">Update Task: </label>
+            <input type="text" name="content" id="content" value="{{tasks[0].content}}" class="form-control" style="width: 50%">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

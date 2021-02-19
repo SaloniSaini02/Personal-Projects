@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> To Do App </title>
+{% endblock %}
+
+{% block body %}
+ <nav class="navbar navbar-expand-sm ">
+     <a class="navbar-brand" href="#">Flask</a>
+     <p class="navbar-text">My To Do App </p>
+</nav>
+
+<div class="container p-3 my-3 border">
+    {% if tasks[0] %}
+    <table class="table table-bordered">
+        <tr class = "thead-dark">
+            <th>Task</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.content }}</td>
+                <td>{{ task.date_created.date() }}</td>
+                <td>
+                    <a href="/delete/{{task._id}}">Delete</a>
+                    <br>
+                    <a href="/update/{{task._id}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h4>There are no tasks. Create one below!</h4>
+    {% endif %}
+     <hr>
+    <div class="form">
+        <form action="/" method="POST">
+            <div class="form-group">
+            <label for="content" style="font-size: 20px ">Task: </label>
+            <input type="text" name="content" id="content" class="form-control" style="width: 50%">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

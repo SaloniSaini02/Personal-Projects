@@ -1,0 +1,17 @@
+.navbar{
+background: black
+}
+.navbar-brand {
+color: #ffa089
+}
+.navbar-text{
+color: #ffa089;
+width: 100%;
+left: 0;
+text-align: center;
+margin: auto;
+padding-top: 10px;
+font-size: 25px
+}
+
+
